@@ -9,14 +9,16 @@
         <link href="css/app.css" rel="stylesheet">
     </head>
     <body>
-        <table class="bsbb  w  tlf  bcgray" ng-controller="InventoryController as inventory">
-            <tr class="bsbb  striped" ng-repeat="item in inventory.items" ng-cloak>
-                <td class="bsbb  w4  bor  borcwhite  ps" ><button class="bsbb  w  bor0  fwb  fsl  red  bc0  hf-darkred" ng-click="inventory.remove( $index )">&times;</button></td>
+        <table class="w  tlf  bcgray" ng-controller="InventoryController as inventory">
+            <tr class="striped" ng-repeat="item in inventory.items" ng-cloak>
+                <td class="bsbb  w4  bor  borcwhite  ps" ><button class="w  bor0  fwb  fsl  red  bc0  hf-darkred" ng-click="inventory.remove( $index )">&times;</button></td>
                 <td class="bsbb  bor  borcwhite  p" >{{ item.name }}</td>
             </tr>
-            <tr class="bsbb  striped">
-                <td class="bsbb  bor  borcwhite  ps"><input class="bsbb  w  ps" ng-model="item.name"></td>
-                <td class="bsbb  bor  borcwhite  ps  tac"><button class="bsbb  w  bor  borrads  ps  oxh  wsnw  toe  fwb  fsl  blue  bc0  hf-darkblue" ng-click="inventory.add( item.name )">+ {{ item.name }}</button></td>
+            <tr class="striped">
+                <td class="bor  borcwhite  ps" colspan="2"><input class="bsbb  w  ps" ng-model="item.name"></td>
+            </tr>
+            <tr>
+                <td class="bor  borcwhite  ps  tac" colspan="2"><button class="bsbb  w  bor  borrads  ps  oxh  wsnw  toe  fwb  blue  bc0  hf-darkblue" ng-click="inventory.add( item.name )">+ {{ item.name }}</button></td>
             </tr>
         </table>
 
