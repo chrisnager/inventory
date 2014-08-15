@@ -1,8 +1,8 @@
 (function () {
-    var app = angular.module('inventory', []);
+    var app = angular.module( 'inventory', [] );
 
     // InventoryFactory
-    app.factory('InventoryFactory', function() {
+    app.factory( 'InventoryFactory', function() {
         var itemsArray = [
             { name: 'Kale chips' },
             { name: 'Cheese' },
@@ -32,7 +32,7 @@
     });
 
     // InventoryController
-    app.controller('InventoryController', function( InventoryFactory ) {
+    app.controller( 'InventoryController', function( InventoryFactory ) {
         this.items = InventoryFactory.req();
 
         this.add = function( newItem ) {
