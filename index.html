@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="black" ng-app="inventory">
+    <head>
+        <meta charset="utf-8">
+        <title>Inventory</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="bsbb  w  tlf  bcgray" ng-controller="InventoryController as inventory">
+            <tr class="bsbb  striped" ng-repeat="item in inventory.items" ng-cloak>
+                <td class="bsbb  w4  bor  borcwhite  ps" ><button class="bsbb  w  bor0  fwb  fsl  red  bc0  hf-darkred" ng-click="inventory.remove( $index )">&times;</button></td>
+                <td class="bsbb  bor  borcwhite  p" >{{ item.name }}</td>
+            </tr>
+            <tr class="bsbb  striped">
+                <td class="bsbb  bor  borcwhite  ps"><input class="bsbb  w  ps" ng-model="item.name"></td>
+                <td class="bsbb  bor  borcwhite  ps  tac"><button class="bsbb  w  bor  borrads  ps  oxh  wsnw  toe  fwb  fsl  blue  bc0  hf-darkblue" ng-click="inventory.add( item.name )">+ {{ item.name }}</button></td>
+            </tr>
+        </table>
+
+        <footer class="p  tac">
+            <small>&copy; 2014 Chris Nager &middot; Crafted by <a class="currentcolor" href="//twitter.com/chrisnager">@chrisnager</a> &middot; Hosted on <a class="currentcolor" href="//github.com/chrisnager/inventory">GitHub</a></small>
+        </footer>
+
+        <script src="js/angular.min.js"></script>
+        <script src="js/fastclick.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
