@@ -16,10 +16,18 @@ const fb = firebase
   .database()
   .ref()
 
+const addItem = (data) => {
+  fb.child('shoes').push(data, response => response)
+}
+
+const actions = {  
+  addItem,
+}
+
 fb.on('value', snapshot => {  
   const store = snapshot.val();
   ReactDOM.render(
-    <App {...store} />,
+    <App {...actions} {...store} />,
     document.getElementById('root')
   )
 })
