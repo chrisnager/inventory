@@ -1,0 +1,21 @@
+.App-header {
+  padding: 2rem;
+  border-bottom: .125rem solid;
+  color: brown;
+}
+
+.Table {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  margin: 0 -.5rem;
+  border-collapse: collapse;
+}
+
+
+th {
+  text-align: inherit;
+}
+
